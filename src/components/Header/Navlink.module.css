@@ -1,0 +1,14 @@
+.Navlink {
+  font-family: "Rubik";
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.Navlink div:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.activeLink {
+  text-decoration: underline;
+}

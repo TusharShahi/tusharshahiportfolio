@@ -1,0 +1,85 @@
+/** Normalization **/
+
+body,
+html,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+ul,
+li {
+  margin: 0 auto;
+  padding: 0;
+  width: auto;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-size: 100%;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: var(--base);
+}
+
+#root {
+  width: 100%;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* To remove vertical top margin */
+  /* justify-content: center; */
+  color: var(--base);
+  font-family: "Raleway";
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+#__next {
+  width: 100%;
+}
+#__next > body {
+  width: 100%;
+}
+#__next > body > div {
+  width: 100%;
+}
+
+h2 {
+  margin: 5% 0 5%;
+}
+
+.Custom404Div {
+  text-align: center;
+  width: 100%;
+  height: 20rem;
+  width: 40rem;
+  padding-top: 5rem;
+}
+.Custom404Div h1 {
+  font-size: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .Custom404Div {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+}
+
+@media only screen and (min-width: 992px) {
+}

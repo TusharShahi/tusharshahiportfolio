@@ -1,0 +1,65 @@
+.WorkArea {
+  padding: 0% 0 0 0;
+  border-radius: 5px;
+  width: 135%;
+}
+
+.WorkBlock {
+  padding: 2% 0 0 0;
+  margin: 0% 0% 5% 0%;
+  background-color: var(--shade);
+  padding: 2%;
+  border-radius: 5px;
+  /*width: 60%;*/
+}
+
+.WorkBlock h3 {
+  font-size: 80%;
+
+  font-weight: 500;
+}
+.WorkBlock h3 > a {
+  cursor: pointer;
+}
+.WorkBlock h3 .projectHasLink {
+  color: var(--base);
+}
+
+.WorkBlock h3 .projectHasLink:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.WorkScreenShotsBox {
+  width: 60%;
+  margin: 2% 0%;
+}
+
+.WorkBlock img {
+  width: 40%;
+  height: auto;
+}
+
+.WorkDescription {
+  padding-left: 0%;
+}
+
+@media only screen and (max-width: 768px) {
+  .WorkArea {
+    width: auto;
+  }
+  .WorkBlock img {
+    width: 70%;
+    /*   text-align: center; */
+    height: auto;
+  }
+
+  .WorkBlock {
+    padding: 5%;
+    margin: 0% 0% 10% 0%;
+  }
+
+  .WorkBlock h3 {
+    margin-bottom: 5%;
+  }
+}

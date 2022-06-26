@@ -1,0 +1,77 @@
+.SkillsBox img[alt="Salesforce"] {
+  position: relative;
+  top: 10px;
+}
+
+.SkillsBox ul {
+  font-size: 1.5rem;
+}
+.SkillsBox li {
+  display: inline-block;
+  margin: 0% 2% 0% 0%;
+  padding: 0% 2% 0% 0%;
+  vertical-align: super;
+}
+.SkillsBox p {
+  padding-top: 20px;
+}
+
+.SkillsBox a {
+  font-size: 16px;
+  width: 100%;
+  margin: 0 5px 0 0;
+  min-width: 30px;
+  text-align: center;
+  font-weight: 400;
+}
+.SkillsBox a.red {
+  color: #f64740;
+  border-color: #f64740;
+}
+.SkillsBox a.green {
+  color: #bdbf09;
+  border-color: #bdbf09;
+}
+.SkillsBox a.blue {
+  color: #2978a0;
+  border-color: #2978a0;
+}
+.SkillsBox a.yellow {
+  color: #fcf300;
+  border-color: #fcf300;
+}
+
+.SkillsBox a.LIGHT {
+  color: var(--base);
+  border-color: var(--base);
+}
+
+.SkillsBox li > a:hover {
+  border-bottom: 3px solid;
+  text-decoration: none;
+}
+.SkillsBox img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .SkillsBox ul {
+    padding: 3% 0%;
+  }
+  .SkillsBox li {
+    margin: 0%;
+  }
+
+  .SkillsBox a {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+}

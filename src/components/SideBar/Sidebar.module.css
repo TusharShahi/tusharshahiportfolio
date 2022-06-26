@@ -1,0 +1,89 @@
+.SideBar {
+  width: 30%;
+  padding: 20px;
+  margin-top: 10%;
+  font-family: "Rubik";
+  text-align: center;
+  font-size: 200%;
+}
+
+.SideBarBox:nth-child(2) {
+  margin-top: 2px;
+}
+.SideBarBox {
+  position: relative;
+  left: 0%;
+}
+
+.sideBarBoxFullWidth {
+  left: 110%;
+}
+
+.sideBarCompressed {
+  margin-top: 20px;
+  position: fixed;
+  top: 5%;
+}
+
+.displayPhotoArea {
+  width: 60%;
+  margin: 5% auto;
+}
+
+.displayPhotoArea img {
+  width: 100%;
+  height: auto;
+}
+
+.welcomeArea {
+  margin-bottom: 15%;
+}
+
+.welcomeArea h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: pre;
+}
+
+.nameSpan {
+  color: var(--headerText);
+}
+
+@media only screen and (min-width: 992px) {
+  .SideBar {
+    font-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .SideBar {
+    font-size: 120%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .SideBar {
+    width: 90%;
+    font-size: 200%;
+    margin-top: 150px;
+    position: static;
+  }
+  .welcomeArea {
+    margin-bottom: 5%;
+  }
+
+  .sideBarCompressed {
+    position: static;
+    left: 0%;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .SideBar {
+    font-size: 150%;
+  }
+
+  .welcomeArea {
+    margin-bottom: 0%;
+  }
+}

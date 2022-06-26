@@ -1,0 +1,22 @@
+.ContentWrapperBox {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.shiftedMain {
+  position: absolute;
+  left: 30%;
+  top: 20%;
+  right: 1%;
+}
+
+@media only screen and (max-width: 768px) {
+  .ContentWrapperBox {
+    flex-direction: column;
+  }
+
+  .shiftedMain {
+    position: static;
+  }
+}

@@ -1,0 +1,63 @@
+.ExperienceBlock {
+  padding: 2% 0 0 0;
+  margin: 0% 0% 5% 0%;
+  background-color: var(--shade);
+  padding: 2%;
+  border-radius: 5px;
+  /*width: 80%;*/
+}
+.ExperienceBlock .role {
+  font-size: 60%;
+}
+
+.ExperienceBlock h3 {
+  font-weight: 500;
+  font-size: 80%;
+  padding: 0% 0% 5px;
+}
+
+.ExperienceBlock h3 a:hover {
+  text-decoration: underline;
+}
+
+.ExperienceBlock h3 a:hover {
+  color: var(--headerText);
+}
+
+.ExperienceBlock h4 {
+  color: var(--paraText);
+  font-weight: 400;
+  font-size: 60%;
+}
+
+.DescriptionBox {
+  padding: 2% 0 0 0;
+}
+
+.DescriptionBox > p {
+  margin: 2% 0%;
+}
+
+/* For SF logo */
+/*.ExperienceBlock:nth-child(1) img{
+    width: 130%;
+}*/
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .ExperienceBlock {
+    padding: 5%;
+  }
+  .ExperienceBlock h4 {
+    font-size: 40%;
+    padding-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+}

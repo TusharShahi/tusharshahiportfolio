@@ -1,0 +1,75 @@
+.App {
+  width: 100%;
+  text-align: center;
+}
+
+/* keep Navbar from collapsing */
+.Header::after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.ContentArea {
+  display: block;
+  width: 90%;
+  text-align: left;
+  padding: 2%;
+  /* TODO : remove maybe*/
+  font-size: 200%;
+}
+
+.ContentArea > div {
+  font-family: "Rubik";
+  color: var(--paraText);
+}
+
+.ContentArea h2 {
+  margin: 3% 0;
+  text-transform: uppercase;
+  color: var(--headerText);
+  border-bottom: 0.1em dashed var(--headerText);
+}
+
+.ContentArea p {
+  font-size: 60%;
+}
+
+.showMainContent {
+  opacity: 1;
+  transition: opacity 0.5s ease-in 0.25s;
+  -webkit-transition: opacity 0.5s ease-in 0.25s;
+  -moz-transition: opacity 0.5s ease-in 0.25s;
+  -o-transition: opacity 0.5s ease-in 0.25s;
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .ContentArea {
+    width: 90%;
+    margin: 5% auto;
+    /*  text-align: center; */
+    opacity: 1;
+    font-size: 200%;
+  }
+
+  .displayMainContent {
+    display: block;
+  }
+
+  .ContentArea h1 {
+    margin-bottom: 10%;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .ContentArea p {
+    font-size: 50%;
+  }
+}

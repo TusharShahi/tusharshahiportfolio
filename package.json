@@ -1,0 +1,50 @@
+{
+  "name": "mywebsite",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://tusharshahi.github.io",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@welldone-software/why-did-you-render": "^6.1.1",
+    "classnames": "^2.2.6",
+    "colorette": "^1.2.0",
+    "gh-pages": "^3.1.0",
+    "latest": "^0.2.0",
+    "next": "^12.1.6",
+    "next-optimized-images": "^2.6.2",
+    "react": "latest",
+    "react-device-detect": "^1.17.0",
+    "react-dom": "latest",
+    "sharp": "^0.29.3"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.28.0"
+  }
+}

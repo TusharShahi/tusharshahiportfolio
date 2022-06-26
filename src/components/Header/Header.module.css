@@ -1,0 +1,71 @@
+.Header{
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    font-size: 150%;
+}
+
+
+    .modeChangeButton{
+        width: 120px;
+        text-align: center;
+    }
+    .modeChangeButton:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    }
+
+    @media only screen and (min-width: 992px){
+
+    }
+
+    @media only screen and (max-width: 991px){ 
+        
+        .Navbar{
+            width: 50%;
+            }
+    
+    
+    }
+
+
+    @media only screen and (max-width: 768px){
+
+        .Header{
+            top: 80px;
+            font-size: 200%;
+        }
+        .Navbar{
+            width: 80%;
+            float: none;
+            text-align: center;
+            }
+        
+            .Navlink{
+                margin: 0 auto;
+            }
+        .modeChangeButton{
+       font-size: 18px;
+    position: relative;
+    bottom: 20px; }
+
+         }
+        
+
+
+@media only screen and (max-width: 479px){ 
+    .Header{
+        top: 50px;
+        font-size: 150%;
+    }
+
+    .Navbar{
+        width: 100%;
+        float: none;
+        text-align: center;
+        }
+    
+
+ }
+
+
