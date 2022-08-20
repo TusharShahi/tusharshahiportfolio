@@ -30,7 +30,7 @@ const MyApp = ({ Component, pageProps }) => {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <title>Tushar Shahi</title>
       </Head>
-      <ContextProvider>
+      <ContextProvider theme={pageProps.theme}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
@@ -38,4 +38,5 @@ const MyApp = ({ Component, pageProps }) => {
     </>
   );
 };
+
 export default MyApp;

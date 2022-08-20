@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import { colorPalette, filter } from "../constants";
 
 const Context = createContext({
@@ -30,25 +30,17 @@ const changeColorsTo = (theme) => {
   }
 };
 
-const setInitialState = () => {
-  let currentTheme = "LIGHT";
-  if (typeof window !== "undefined" && window.localStorage) {
-    let storageTheme = localStorage.getItem("themeSwitch");
-    currentTheme = storageTheme ? storageTheme : "LIGHT";
-  }
+const ContextProvider = ({ theme, children }) => {
+  let [currentTheme, setTheme] = useState(() => {
+    changeColorsTo(theme);
+    return theme;
+  });
 
-  changeColorsTo(currentTheme);
-  return currentTheme;
-};
-
-const ContextProvider = (props) => {
-  let [currentTheme, setTheme] = useState(setInitialState);
-  useEffect(() => {}, []);
   let themeSwitchHandler = () => {
     const newTheme = currentTheme === "DARK" ? "LIGHT" : "DARK";
     setTheme(newTheme);
-    window && localStorage.setItem("themeSwitch", newTheme);
     changeColorsTo(newTheme);
+    if (document) document.cookie = `themeSwitch=${newTheme}`;
   };
 
   return (
@@ -58,7 +50,7 @@ const ContextProvider = (props) => {
         toggleTheme: themeSwitchHandler
       }}
     >
-      {props.children}
+      {children}
     </Context.Provider>
   );
 };
