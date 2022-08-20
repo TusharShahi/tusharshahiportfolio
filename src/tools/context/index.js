@@ -30,14 +30,20 @@ const changeColorsTo = (theme) => {
   }
 };
 
-const ContextProvider = (props) => {
-  let [currentTheme, setTheme] = useState("LIGHT");
-  useEffect(() => {
+const setInitialState = () => {
+  let currentTheme = "LIGHT";
+  if (typeof window !== "undefined" && window.localStorage) {
     let storageTheme = localStorage.getItem("themeSwitch");
-    let currentTheme = storageTheme ? storageTheme : "LIGHT";
-    setTheme(currentTheme);
-    changeColorsTo(currentTheme);
-  }, []);
+    currentTheme = storageTheme ? storageTheme : "LIGHT";
+  }
+
+  changeColorsTo(currentTheme);
+  return currentTheme;
+};
+
+const ContextProvider = (props) => {
+  let [currentTheme, setTheme] = useState(setInitialState);
+  useEffect(() => {}, []);
   let themeSwitchHandler = () => {
     const newTheme = currentTheme === "DARK" ? "LIGHT" : "DARK";
     setTheme(newTheme);
