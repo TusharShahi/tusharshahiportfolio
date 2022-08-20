@@ -1,11 +1,8 @@
-import React, { useContext, memo } from "react";
-import { Context } from "../../tools/context";
-import { abilities, abilitesNameMapping } from "../../tools/constants";
+import React, { memo } from "react";
+import { abilitesNameMapping, abilities } from "../../tools/constants";
 import styles from "./SkillsBox.module.css";
 
 const SkillsBox = memo((props) => {
-  const { theme } = useContext(Context);
-
   const createSkillsBox = (skillsList, type, groupName) => {
     let iterationList = skillsList;
     let listTitle = "Skills Used : ";
@@ -18,11 +15,7 @@ const SkillsBox = memo((props) => {
     if (iterationList != null) {
       let skillsIcon = iterationList.map((x) => (
         <li key={x.name}>
-          <a
-            className={styles[x.color + " " + theme]}
-            rel="noopener noreferrer"
-            href={x.link}
-          >
+          <a rel="noopener noreferrer" href={x.link}>
             {x.name}
           </a>
         </li>

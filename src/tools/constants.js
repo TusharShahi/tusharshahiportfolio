@@ -273,3 +273,13 @@ export const colorPalette = {
     shade: "#f5f5f5"
   }
 };
+
+export const filter = {
+  dark: {
+    socialMediaIcon:
+      "invert(100) sepia(0) saturate(1) hue-rotate(0deg) brightness(100)"
+  },
+  light: {
+    socialMediaIcon: "invert(0) sepia(0) saturate(0) brightness(0)"
+  }
+};
