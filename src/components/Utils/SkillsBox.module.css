@@ -23,25 +23,6 @@
   min-width: 30px;
   text-align: center;
   font-weight: 400;
-}
-.SkillsBox a.red {
-  color: #f64740;
-  border-color: #f64740;
-}
-.SkillsBox a.green {
-  color: #bdbf09;
-  border-color: #bdbf09;
-}
-.SkillsBox a.blue {
-  color: #2978a0;
-  border-color: #2978a0;
-}
-.SkillsBox a.yellow {
-  color: #fcf300;
-  border-color: #fcf300;
-}
-
-.SkillsBox a.LIGHT {
   color: var(--base);
   border-color: var(--base);
 }

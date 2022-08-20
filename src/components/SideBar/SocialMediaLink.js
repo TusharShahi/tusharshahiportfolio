@@ -1,12 +1,9 @@
 import Image from "next/image";
-import React, { useContext, memo } from "react";
+import React, { memo } from "react";
 import { socialMediaIconLink } from "../../tools/constants";
-import { Context } from "../../tools/context";
 import styles from "./ContactArea.module.css";
 
 const SocialMediaLink = memo((props) => {
-  const { theme } = useContext(Context);
-
   let socialMediaIconLinkWordsArray = socialMediaIconLink.split("-");
   socialMediaIconLinkWordsArray[1] = props.website + ".svg";
   const componentSocialMediaIconLink =
@@ -23,11 +20,12 @@ const SocialMediaLink = memo((props) => {
         width={21}
         height={21}
         quality={5}
+        priority
       ></Image>
     </a>
   );
   return (
-    <div className={`${styles.SocialMediaLink} ${styles[theme]}`}>
+    <div className={styles.SocialMediaLink}>
       <div className={styles.MediaIconBox}>{imageLinkTagCode}</div>
     </div>
   );
