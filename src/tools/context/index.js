@@ -19,12 +19,12 @@ const changeColorsTo = (theme) => {
     properties.forEach((x) => {
       document.documentElement.style.setProperty(
         `--${x}`,
-        colorPalette[(theme === undefined ? "dark" : theme).toLowerCase()][x]
+        colorPalette[(theme === undefined ? "LIGHT" : theme).toLowerCase()][x]
       );
     });
     document.documentElement.style.setProperty(
       `--socialIconsfilter`,
-      filter[(theme === undefined ? "dark" : theme).toLowerCase()]
+      filter[(theme === undefined ? "LIGHT" : theme).toLowerCase()]
         .socialMediaIcon
     );
   }
@@ -34,7 +34,7 @@ const ContextProvider = (props) => {
   let [currentTheme, setTheme] = useState("LIGHT");
   useEffect(() => {
     let storageTheme = localStorage.getItem("themeSwitch");
-    let currentTheme = storageTheme ? storageTheme : "DARK";
+    let currentTheme = storageTheme ? storageTheme : "LIGHT";
     setTheme(currentTheme);
     changeColorsTo(currentTheme);
   }, []);

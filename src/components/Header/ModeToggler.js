@@ -14,9 +14,8 @@ const ModeToggler = memo(() => {
     }
   };
 
-  //theme = theme ? "dark" : "light";
   let emojiSpan =
-    (theme === undefined ? "dark" : theme).toUpperCase() === "DARK" ? (
+    (theme === undefined ? "light" : theme).toUpperCase() === "DARK" ? (
       <span role="img" aria-hidden="true">
         &#127771;
       </span>
@@ -34,7 +33,7 @@ const ModeToggler = memo(() => {
       onClick={toggleTheme}
       onKeyDown={keyDown}
     >
-      {(theme === undefined ? "dark" : theme).toUpperCase()} {emojiSpan}
+      {(theme === undefined ? "light" : theme).toUpperCase()} {emojiSpan}
     </div>
   );
 });

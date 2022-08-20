@@ -9,7 +9,7 @@
 .SocialMediaLink {
   width: 30%;
   filter: var(--socialIconsfilter);
-  transition: filter 0.5s ease-in 0.5s;
+  /*transition: filter 0.5s ease-in 0.5s;*/
 }
 
 .SocialMediaLink:nth-child(2) > .MediaIconBox {
