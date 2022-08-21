@@ -31,10 +31,7 @@ const changeColorsTo = (theme) => {
 };
 
 const ContextProvider = ({ theme, children }) => {
-  let [currentTheme, setTheme] = useState(() => {
-    changeColorsTo(theme);
-    return theme;
-  });
+  let [currentTheme, setTheme] = useState(theme);
 
   let themeSwitchHandler = () => {
     const newTheme = currentTheme === "DARK" ? "LIGHT" : "DARK";
