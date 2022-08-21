@@ -59,7 +59,7 @@ const MyDocument = ({ theme }) => {
 
 MyDocument.getInitialProps = async (ctx) => {
   const initialProps = await Document.getInitialProps(ctx);
-  const theme = ctx.req.cookies.themeSwitch ?? "LIGHT";
+  const theme = ctx.req?.cookies?.themeSwitch ?? "LIGHT";
   return { ...initialProps, theme };
 };
 
