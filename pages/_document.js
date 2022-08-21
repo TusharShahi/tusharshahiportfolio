@@ -1,17 +1,21 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import { useMemo } from "react";
 import { colorPalette, filter } from "../src/tools/constants";
 
 const MyDocument = ({ theme }) => {
-  let correctTheme =
-    colorPalette[(theme === undefined ? "LIGHT" : theme).toLowerCase()];
-  let correctFilter =
-    filter[(theme === undefined ? "LIGHT" : theme).toLowerCase()];
-  const styleObject = {};
+  const styleObject = useMemo(() => {
+    let correctTheme =
+      colorPalette[(theme === undefined ? "LIGHT" : theme).toLowerCase()];
+    let correctFilter =
+      filter[(theme === undefined ? "LIGHT" : theme).toLowerCase()];
+    const styles = {};
 
-  Object.entries(correctTheme).forEach(([key, value]) => {
-    styleObject[`--${key}`] = value;
-  });
-  styleObject[`--socialIconsfilter`] = correctFilter.socialMediaIcon;
+    Object.entries(correctTheme).forEach(([key, value]) => {
+      styles[`--${key}`] = value;
+    });
+    styles[`--socialIconsfilter`] = correctFilter.socialMediaIcon;
+    return styles;
+  }, [colorPalette, filter]);
 
   return (
     <Html lang="en" style={styleObject}>
