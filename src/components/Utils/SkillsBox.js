@@ -15,7 +15,7 @@ const SkillsBox = memo((props) => {
     if (iterationList != null) {
       let skillsIcon = iterationList.map((x) => (
         <li key={x.name}>
-          <a rel="noopener noreferrer" href={x.link}>
+          <a rel="noopener noreferrer" href={x.link} target="_blank">
             {x.name}
           </a>
         </li>

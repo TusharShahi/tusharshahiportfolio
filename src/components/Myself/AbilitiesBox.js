@@ -7,6 +7,7 @@ const AbilitiesBox = () => {
     <div className={styles.AbilitiesBox}>
       <h2>Abilities</h2>
       <SkillsBox groupName="web" type="abilities"></SkillsBox>
+      <SkillsBox groupName="app" type="abilities"></SkillsBox>
       <SkillsBox groupName="database" type="abilities"></SkillsBox>
       <SkillsBox groupName="tools" type="abilities"></SkillsBox>
       {/*<SkillsBox groupName="core" type="abilities"></SkillsBox>*/}

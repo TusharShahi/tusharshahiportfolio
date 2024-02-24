@@ -17,9 +17,6 @@ const Myself = memo(() => {
       <div id="description">
         <p>{myDescription}</p>
       </div>
-      <div id="javascriptBrag">
-        <p>{myBrag}</p>
-      </div>
       <div id="hobbies">
         <p>{myHobbies}</p>
       </div>
@@ -33,7 +30,16 @@ const Myself = memo(() => {
           href="/TusharShahi_SoftwareEngineer.pdf"
           download
         >
-          Download Resume &#11015;
+          Download Resume &#x2193;
+        </a>
+      </p>
+      <p id="blogLink">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://dev.to/tusharshahi"
+        >
+          Visit Blog &#x2197;
         </a>
       </p>
 
