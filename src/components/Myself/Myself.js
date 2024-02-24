@@ -3,12 +3,7 @@ import AbilitiesBox from "./AbilitiesBox";
 import styles from "./Myself.module.css";
 import appStyles from "../../App.module.css";
 
-import {
-  myDescription,
-  myFreeTime,
-  myBrag,
-  myHobbies,
-} from "../../tools/constants";
+import { myDescription, myFreeTime, myHobbies } from "../../tools/constants";
 
 const Myself = memo(() => {
   return (
