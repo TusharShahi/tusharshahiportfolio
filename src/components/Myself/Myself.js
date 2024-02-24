@@ -7,7 +7,7 @@ import {
   myDescription,
   myFreeTime,
   myBrag,
-  myHobbies
+  myHobbies,
 } from "../../tools/constants";
 
 const Myself = memo(() => {
@@ -28,7 +28,11 @@ const Myself = memo(() => {
       </div>
 
       <p id="resumeLink">
-        <a rel="noopener noreferrer" href={"/Resume.pdf"} download>
+        <a
+          rel="noopener noreferrer"
+          href="/TusharShahi_SoftwareEngineer.pdf"
+          download
+        >
           Download Resume &#11015;
         </a>
       </p>
