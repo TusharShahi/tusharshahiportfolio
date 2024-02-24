@@ -3,12 +3,7 @@ import AbilitiesBox from "./AbilitiesBox";
 import styles from "./Myself.module.css";
 import appStyles from "../../App.module.css";
 
-import {
-  myDescription,
-  myFreeTime,
-  myBrag,
-  myHobbies
-} from "../../tools/constants";
+import { myDescription, myFreeTime, myHobbies } from "../../tools/constants";
 
 const Myself = memo(() => {
   return (
@@ -16,9 +11,6 @@ const Myself = memo(() => {
       <h2>Myself</h2>
       <div id="description">
         <p>{myDescription}</p>
-      </div>
-      <div id="javascriptBrag">
-        <p>{myBrag}</p>
       </div>
       <div id="hobbies">
         <p>{myHobbies}</p>
