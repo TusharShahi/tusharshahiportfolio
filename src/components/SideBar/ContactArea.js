@@ -1,10 +1,7 @@
 import React, { memo } from "react";
 import styles from "./ContactArea.module.css";
 import SocialMediaLink from "./SocialMediaLink";
-import {
-  /*phoneNumber ,*/ emailLink,
-  socialMediaLinks
-} from "../../tools/constants";
+import { emailLink, socialMediaLinks } from "../../tools/constants";
 
 const ContactArea = memo(() => {
   const mailToLink = "mailto:" + emailLink;
@@ -14,15 +11,21 @@ const ContactArea = memo(() => {
       <div className={styles.socialMediaBox}>
         <SocialMediaLink
           website="linkedin"
-          link={socialMediaLinks["linkedin"]}
+          link={socialMediaLinks["linkedin"].link}
+          width={socialMediaLinks["linkedin"].width}
+          height={socialMediaLinks["linkedin"].height}
         ></SocialMediaLink>
         <SocialMediaLink
-          website="instagram"
-          link={socialMediaLinks["instagram"]}
+          website="stack"
+          link={socialMediaLinks["stack"].link}
+          width={socialMediaLinks["stack"].width}
+          height={socialMediaLinks["stack"].height}
         ></SocialMediaLink>
         <SocialMediaLink
           website="github"
-          link={socialMediaLinks["github"]}
+          link={socialMediaLinks["github"].link}
+          width={socialMediaLinks["github"].width}
+          height={socialMediaLinks["github"].height}
         ></SocialMediaLink>
       </div>
 
@@ -30,7 +33,6 @@ const ContactArea = memo(() => {
         <p>
           <a href={mailToLink}>{emailLink}</a>
         </p>
-        {/*<p><a href={telNumberLink}>{phoneNumber}</a></p>*/}
       </div>
 
       <div className={styles.copyrightBox}>
@@ -39,5 +41,5 @@ const ContactArea = memo(() => {
     </div>
   );
 });
-ContactArea.type.displayName = "CONTACTAREA";
+ContactArea.type.displayName = "CONTACT_AREA";
 export default ContactArea;

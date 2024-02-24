@@ -6,42 +6,62 @@ import {
   experienceRMO,
   experienceRMO2,
   experienceTCFG,
-  experiencePluang
+  experiencePluang,
+  experienceCuemath,
 } from "../../tools/constants";
 import styles from "../../App.module.css";
 
+const WorkExperience = memo(() => {
+  const workExperienceContent = [
+    experienceCuemath,
+    experiencePluang,
+    experienceShell,
+    experienceRMO,
+    experienceRMO2,
+  ];
+  return workExperienceContent.map((x) => (
+    <ExperienceBlock
+      name={x.company}
+      description={x.description}
+      duration={x.timePeriod}
+      skillsUsed={x.skillsUsed}
+      link={x.companyLink}
+      role={x.role}
+      key={x.timePeriod}
+    ></ExperienceBlock>
+  ));
+});
+WorkExperience.type.displayName = "WORK_EXPERIENCE";
+
+const CollegeExperience = memo(() => {
+  const collegeExperienceContent = [experienceMRM, experienceTCFG];
+  return collegeExperienceContent.map((x) => (
+    <ExperienceBlock
+      name={x.company}
+      description={x.description}
+      duration={x.timePeriod}
+      skillsUsed={x.skillsUsed}
+      link={x.companyLink}
+      role={x.role}
+      key={x.timePeriod}
+    ></ExperienceBlock>
+  ));
+});
+CollegeExperience.type.displayName = "COLLEGE_EXPERIENCE";
+
 const Experience = memo(() => {
-  const createExperienceBlock = (contentArray) => {
-    let experienceBlock = contentArray.map((x) => (
-      <ExperienceBlock
-        name={x.company}
-        description={x.description}
-        duration={x.timePeriod}
-        skillsUsed={x.skillsUsed}
-        link={x.companyLink}
-        role={x.role}
-        key={x.timePeriod}
-      ></ExperienceBlock>
-    ));
-
-    return experienceBlock;
-  };
-
   return (
     <div className={styles.ContentArea}>
       <h2>Experience</h2>
       <div id="corporate">
-        {createExperienceBlock([
-          experiencePluang,
-          experienceShell,
-          experienceRMO,
-          experienceRMO2
-        ])}
+        <WorkExperience />
       </div>
       <div id="school">
         <h2>College</h2>
         <div></div>
-        <div>{createExperienceBlock([experienceMRM, experienceTCFG])}</div>
+        <div>
+          <CollegeExperience />
+        </div>
       </div>
     </div>
   );

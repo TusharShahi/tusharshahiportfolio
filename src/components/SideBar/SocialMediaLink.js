@@ -3,30 +3,30 @@ import React, { memo } from "react";
 import { socialMediaIconLink } from "../../tools/constants";
 import styles from "./ContactArea.module.css";
 
-const SocialMediaLink = memo((props) => {
-  let socialMediaIconLinkWordsArray = socialMediaIconLink.split("-");
-  socialMediaIconLinkWordsArray[1] = props.website + ".svg";
-  const componentSocialMediaIconLink =
-    socialMediaIconLinkWordsArray[0] + "-" + socialMediaIconLinkWordsArray[1];
+const SocialMediaLink = memo(({ website, link, width, height }) => {
+  console.log({ link, width, height });
+  let socialMediaIconLinkWordsArray = socialMediaIconLink.split("/");
+  socialMediaIconLinkWordsArray[socialMediaIconLinkWordsArray.length - 1] =
+    website + ".svg";
+  const componentSocialMediaIconLink = socialMediaIconLinkWordsArray.join("/");
 
-  const altText = props.website + " link";
-  const socialMediaLink = props.link;
-  let imageLinkTagCode;
-  imageLinkTagCode = (
-    <a href={socialMediaLink} rel="noopener noreferrer">
-      <Image
-        src={componentSocialMediaIconLink}
-        alt={altText}
-        width={21}
-        height={21}
-        quality={5}
-        priority
-      ></Image>
-    </a>
-  );
+  const altText = website + " link";
+
   return (
     <div className={styles.SocialMediaLink}>
-      <div className={styles.MediaIconBox}>{imageLinkTagCode}</div>
+      <div className={styles.MediaIconBox}>
+        <a href={link} rel="noopener noreferrer">
+          <Image
+            src={componentSocialMediaIconLink}
+            alt={altText}
+            width={width}
+            height={height}
+            quality={5}
+            layout="fixed"
+            priority
+          ></Image>
+        </a>
+      </div>
     </div>
   );
 });
