@@ -6,7 +6,6 @@ import appStyles from "../../App.module.css";
 import {
   myDescription,
   myFreeTime,
-  myBrag,
   myHobbies,
 } from "../../tools/constants";
 
