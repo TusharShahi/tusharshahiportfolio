@@ -30,7 +30,6 @@ export const socialMediaLinks = {
 
 export const myDescription =
   "Software Engineer based in Bangalore. A polyglot developer with keen a interest in solving complex problems. Has experience working at startups as well as a Fortune 500 company. Committed to continuous learning and passionate about teaching.";
-// export const myBrag = "Very comfortable with Javascript. Loves to automate.";
 export const myFreeTime = "In his free time - reads, lifts.";
 export const myHobbies =
   "Plays football for the chills and has a fondness for the hills.";
