@@ -33,6 +33,10 @@ a {
   width: 100%;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background-color: var(--background);
   display: flex;
