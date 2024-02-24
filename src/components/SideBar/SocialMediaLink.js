@@ -4,7 +4,6 @@ import { socialMediaIconLink } from "../../tools/constants";
 import styles from "./ContactArea.module.css";
 
 const SocialMediaLink = memo(({ website, link, width, height }) => {
-  console.log({ link, width, height });
   let socialMediaIconLinkWordsArray = socialMediaIconLink.split("/");
   socialMediaIconLinkWordsArray[socialMediaIconLinkWordsArray.length - 1] =
     website + ".svg";
