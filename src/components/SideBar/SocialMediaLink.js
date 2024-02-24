@@ -14,7 +14,7 @@ const SocialMediaLink = memo(({ website, link, width, height }) => {
   return (
     <div className={styles.SocialMediaLink}>
       <div className={styles.MediaIconBox}>
-        <a href={link} rel="noopener noreferrer">
+        <a href={link} rel="noopener noreferrer" target="_blank">
           <Image
             src={componentSocialMediaIconLink}
             alt={altText}

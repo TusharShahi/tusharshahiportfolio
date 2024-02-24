@@ -29,9 +29,9 @@ export const socialMediaLinks = {
 };
 
 export const myDescription =
-  "Software Engineer based out of Bangalore. A polyglot developer who gets excited by solving complex problems. Has experience working at an early stage startup as well as a Fortune 500 company.";
-export const myBrag = "Very comfortable with Javascript. Loves to automate.";
-export const myFreeTime = "In his freetime - reads, lifts.";
+  "Software Engineer based in Bangalore. A polyglot developer with keen a interest in solving complex problems. Has experience working at startups as well as a Fortune 500 company. Committed to continuous learning and passionate about teaching.";
+// export const myBrag = "Very comfortable with Javascript. Loves to automate.";
+export const myFreeTime = "In his free time - reads, lifts.";
 export const myHobbies =
   "Plays football for the chills and has a fondness for the hills.";
 
@@ -97,6 +97,12 @@ export const skills = {
     link: "https://www.w3.org/Style/CSS/Overview.en.html",
     color: "blue",
   },
+  postgres: {
+    name: "SQL",
+    imageLink: "SQL",
+    link: "https://www.postgresql.org/",
+    color: "green",
+  },
   mongo: {
     name: "Mongo",
     imageLink: "mongo",
@@ -139,10 +145,10 @@ export const skills = {
     link: "https://code.visualstudio.com/",
     color: "blue",
   },
-  linux: {
-    name: "Linux",
-    imageLink: "linux",
-    link: "https://www.linux.org/",
+  aws: {
+    name: "AWS",
+    imageLink: "AWS",
+    link: "https://aws.amazon.com/?nc2=h_lg",
     color: "yellow",
   },
 };
@@ -270,20 +276,23 @@ export const experienceTCFG = {
 
 export const abilities = {
   web: [
-    skills["typescript"],
     skills["react"],
     skills["next"],
     skills["node"],
+    skills["typescript"],
+    skills["flask"],
     skills["html"],
     skills["css"],
   ],
-  database: [skills["mongo"], skills["es"]],
+  app: [skills["reactnative"]],
+  database: [skills["mongo"], skills["es"], skills["postgres"]],
   core: [skills["cpp"]],
-  tools: [skills["git"], skills["vsc"], skills["linux"]],
+  tools: [skills["git"], skills["aws"]],
 };
 
 export const abilitesNameMapping = {
   web: "Web Technologies",
+  app: "Mobile App Dev",
   database: "Databases",
   core: "Core",
   tools: "Tools and Platforms",

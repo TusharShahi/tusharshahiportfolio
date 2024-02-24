@@ -9,7 +9,6 @@ const ModeToggler = memo(() => {
 
   const keyDown = (e) => {
     if (e.keyCode == "13" || e.keyCode == "32") {
-      //console.log("called");
       buttonRef.current.click();
     }
   };

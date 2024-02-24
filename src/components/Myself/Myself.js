@@ -20,8 +20,21 @@ const Myself = memo(() => {
       </div>
 
       <p id="resumeLink">
-        <a rel="noopener noreferrer" href={"/Resume.pdf"} download>
-          Download Resume &#11015;
+        <a
+          rel="noopener noreferrer"
+          href="/TusharShahi_SoftwareEngineer.pdf"
+          download
+        >
+          Download Resume &#x2193;
+        </a>
+      </p>
+      <p id="blogLink">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://dev.to/tusharshahi"
+        >
+          Visit Blog &#x2197;
         </a>
       </p>
 
